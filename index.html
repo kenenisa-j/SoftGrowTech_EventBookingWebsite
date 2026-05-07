@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoftGrowTech Conference | Event Booking</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cs/style.css" />
+  </head>
+
+  <body class="dark-theme" id="home">
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h2>SoftGrowTech</h2>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <button class="theme-toggle-btn" id="themeToggle">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tag">Future of Technology 2026</p>
+        <h1>The Biggest Tech Conference <span>of the Year</span></h1>
+        <p class="hero-description">
+          Join developers, designers, entrepreneurs, and AI innovators for an
+          unforgettable technology experience.
+        </p>
+        <div class="hero-buttons">
+          <a href="#events" class="btn primary-btn">Explore Events</a>
+          <a href="#events" class="btn secondary-btn">Book Ticket</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <h3>20K+</h3>
+            <p>Attendees</p>
+          </div>
+          <div class="stat-box">
+            <h3>150+</h3>
+            <p>Speakers</p>
+          </div>
+          <div class="stat-box">
+            <h3>40+</h3>
+            <p>Workshops</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="floating-card">
+          <i class="fa-solid fa-microchip"></i>
+          <h3>AI Innovation Summit</h3>
+          <p>Explore the future of AI and next-gen technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section" id="events">
+      <div class="section-title">
+        <p class="section-tag">Upcoming Conferences</p>
+        <h2>Explore Our Featured Events</h2>
+        <p class="section-description">
+          Discover premium technology conferences and workshops across the
+          globe.
+        </p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="workshop">Workshop</button>
+        <button class="filter-btn" data-filter="startup">Startup</button>
+      </div>
+
+      <div class="events-container">
+        <div class="event-card" data-category="ai">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500"
+              alt="AI Summit"
+            />
+            <span class="event-category">AI</span>
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <i class="fa-solid fa-calendar-days"></i> June 18, 2026
+            </div>
+            <h3>AI Innovation Summit</h3>
+            <p>Master machine learning and generative AI models.</p>
+            <div class="event-info">
+              <span><i class="fa-solid fa-location-dot"></i> Dubai, UAE</span>
+              <span><i class="fa-solid fa-ticket"></i> $49</span>
+            </div>
+            <button
+              class="book-btn"
+              data-event="AI Innovation Summit"
+              data-price="49"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="tech">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500"
+              alt="Tech Expo"
+            />
+            <span class="event-category">Tech</span>
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <i class="fa-solid fa-calendar-days"></i> July 02, 2026
+            </div>
+            <h3>Global Tech Expo</h3>
+            <p>The largest gathering of hardware and software engineers.</p>
+            <div class="event-info">
+              <span><i class="fa-solid fa-location-dot"></i> Berlin, DE</span>
+              <span><i class="fa-solid fa-ticket"></i> $69</span>
+            </div>
+            <button
+              class="book-btn"
+              data-event="Global Tech Expo"
+              data-price="69"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="startup">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=500"
+              alt="Startup"
+            />
+            <span class="event-category">Startup</span>
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <i class="fa-solid fa-calendar-days"></i> Aug 12, 2026
+            </div>
+            <h3>Founder Connect</h3>
+            <p>Pitch your idea to top-tier VCs and angel investors.</p>
+            <div class="event-info">
+              <span><i class="fa-solid fa-location-dot"></i> Austin, TX</span>
+              <span><i class="fa-solid fa-ticket"></i> $99</span>
+            </div>
+            <button
+              class="book-btn"
+              data-event="Founder Connect"
+              data-price="99"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="workshop">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500"
+              alt="Workshop"
+            />
+            <span class="event-category">Workshop</span>
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <i class="fa-solid fa-calendar-days"></i> Sept 05, 2026
+            </div>
+            <h3>UI/UX Masterclass</h3>
+            <p>Learn advanced Figma prototyping and user research.</p>
+            <div class="event-info">
+              <span><i class="fa-solid fa-location-dot"></i> London, UK</span>
+              <span><i class="fa-solid fa-ticket"></i> $29</span>
+            </div>
+            <button
+              class="book-btn"
+              data-event="UI/UX Masterclass"
+              data-price="29"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="ai">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500"
+              alt="AI Robot"
+            />
+            <span class="event-category">AI</span>
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <i class="fa-solid fa-calendar-days"></i> Oct 20, 2026
+            </div>
+            <h3>Robotics Forum</h3>
+            <p>Integration of AI with physical robotic systems.</p>
+            <div class="event-info">
+              <span><i class="fa-solid fa-location-dot"></i> Tokyo, JP</span>
+              <span><i class="fa-solid fa-ticket"></i> $55</span>
+            </div>
+            <button
+              class="book-btn"
+              data-event="Robotics Forum"
+              data-price="55"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="tech">
+          <div class="event-image">
+            <img
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500"
+              alt="Cyber"
+            />
+            <span class="event-category">Tech</span>
+          </div>
+          <div class="event-content">
+            <div class="event-date">
+              <i class="fa-solid fa-calendar-days"></i> Nov 11, 2026
+            </div>
+            <h3>Cyber Security Hub</h3>
+            <p>Protecting the future of decentralized networks.</p>
+            <div class="event-info">
+              <span><i class="fa-solid fa-location-dot"></i> Paris, FR</span>
+              <span><i class="fa-solid fa-ticket"></i> $75</span>
+            </div>
+            <button
+              class="book-btn"
+              data-event="Cyber Security Hub"
+              data-price="75"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="speakers-section" id="speakers">
+      <div class="section-title">
+        <p class="section-tag">Experts</p>
+        <h2>World-Class Speakers</h2>
+      </div>
+      <div
+        class="speakers-container"
+        style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 0 5%;
+        "
+      >
+        <div
+          class="speaker-card"
+          style="
+            text-align: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            width: 220px;
+            border: 1px solid var(--card-border);
+          "
+        >
+          <img
+            src="https://i.pravatar.cc/150?u=1"
+            style="border-radius: 50%; width: 100px; margin-bottom: 15px"
+          />
+          <h4>Dr. Elena Vance</h4>
+          <p>AI Researcher</p>
+        </div>
+        <div
+          class="speaker-card"
+          style="
+            text-align: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            width: 220px;
+            border: 1px solid var(--card-border);
+          "
+        >
+          <img
+            src="https://i.pravatar.cc/150?u=2"
+            style="border-radius: 50%; width: 100px; margin-bottom: 15px"
+          />
+          <h4>Marcus Thorne</h4>
+          <p>CTO, NextGen</p>
+        </div>
+        <div
+          class="speaker-card"
+          style="
+            text-align: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            width: 220px;
+            border: 1px solid var(--card-border);
+          "
+        >
+          <img
+            src="https://i.pravatar.cc/150?u=3"
+            style="border-radius: 50%; width: 100px; margin-bottom: 15px"
+          />
+          <h4>Sarah Jenkins</h4>
+          <p>UX Director</p>
+        </div>
+        <div
+          class="speaker-card"
+          style="
+            text-align: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            width: 220px;
+            border: 1px solid var(--card-border);
+          "
+        >
+          <img
+            src="https://i.pravatar.cc/150?u=9"
+            style="border-radius: 50%; width: 100px; margin-bottom: 15px"
+          />
+          <h4>David Choi</h4>
+          <p>Blockchain Lead</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-section" id="schedule">
+      <div class="section-title">
+        <p class="section-tag">Timetable</p>
+        <h2>Event Schedule</h2>
+      </div>
+      <div
+        class="schedule-container"
+        style="
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background: var(--card-bg);
+          border-radius: 15px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 0;
+          "
+        >
+          <span>09:00 AM</span><strong>Opening Keynote</strong
+          ><span>Main Hall</span>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 0;
+          "
+        >
+          <span>11:30 AM</span><strong>AI & Ethics Workshop</strong
+          ><span>Room B</span>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--card-border);
+            padding: 15px 0;
+          "
+        >
+          <span>02:00 PM</span><strong>Networking Lunch</strong
+          ><span>Cafeteria</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials">
+      <div class="section-title">
+        <p class="section-tag">Testimonials</p>
+        <h2>What Our Attendees Say</h2>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="https://i.pravatar.cc/100?u=4" alt="User" />
+            <div class="profile-info">
+              <h3>Michael Anderson</h3>
+              <p>DevOps Engineer</p>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            “The networking sessions alone were worth the ticket price!”
+          </p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="https://i.pravatar.cc/100?u=5" alt="User" />
+            <div class="profile-info">
+              <h3>Sophia Reed</h3>
+              <p>Data Scientist</p>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            “Deeply technical content and very engaging speakers.”
+          </p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-profile">
+            <img src="https://i.pravatar.cc/100?u=12" alt="User" />
+            <div class="profile-info">
+              <h3>James Bond</h3>
+              <p>Security Analyst</p>
+            </div>
+          </div>
+          <div class="rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-regular fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            “Loved the hands-on workshops. Learned so much in 2 days.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="section-title">
+        <p class="section-tag">FAQ</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How can I book an event ticket?</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Click the “Book Now” button on any event card, fill the form, and
+              you're set!
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is there a student discount?</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, students with a valid ID can get 30% off at the door.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are the events recorded?</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              All keynotes are recorded and sent to ticket holders via email.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I refund my ticket?</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Tickets are refundable up to 48 hours before the event start time.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Is lunch provided?</h3>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, full-day passes include a networking lunch and coffee breaks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" style="padding: 100px 5%">
+      <div class="section-title">
+        <p class="section-tag">Get in Touch</p>
+        <h2>Contact Us</h2>
+      </div>
+      <form
+        class="contact-form"
+        style="
+          max-width: 600px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        "
+      >
+        <input
+          type="text"
+          placeholder="Full Name"
+          required
+          style="
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            color: var(--text-main);
+          "
+        />
+        <input
+          type="email"
+          placeholder="Email Address"
+          required
+          style="
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            color: var(--text-main);
+          "
+        />
+        <textarea
+          placeholder="Your Message"
+          rows="5"
+          required
+          style="
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            color: var(--text-main);
+          "
+        ></textarea>
+        <button class="btn primary-btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div class="booking-modal" id="bookingModal">
+      <div class="modal-content">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-header">
+          <h2>Reserve Your Seat</h2>
+          <p>Complete your booking details below.</p>
+        </div>
+        <form class="booking-form">
+          <div class="input-group">
+            <label>Full Name</label><input type="text" required />
+          </div>
+          <div class="input-group">
+            <label>Email</label><input type="email" required />
+          </div>
+          <div class="input-group">
+            <label>Selected Event</label
+            ><input type="text" id="selectedEvent" readonly />
+          </div>
+          <div class="input-group">
+            <label>Tickets</label
+            ><input type="number" id="ticketCount" min="1" max="10" value="1" />
+          </div>
+          <div class="total-price">
+            <h3>Total Price: <span id="totalPrice">$0</span></h3>
+          </div>
+          <button type="submit" class="submit-booking-btn">
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>SoftGrowTech</h2>
+          <p>Building the future through innovation and networking.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Event Categories</h3>
+          <ul>
+            <li><a href="#events">AI Conferences</a></li>
+            <li><a href="#events">Startup Meetups</a></li>
+            <li><a href="#events">Workshops</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 TechNova. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
