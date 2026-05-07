@@ -24,4 +24,4 @@ This project is part of my **Web Development Internship** at **SoftGrow Tech** (
 
 ---
 
-_Created by [Your Name] as part of the SoftGrow Tech Internship 2026._
+_Created by Kenenisa Jaleto as part of the SoftGrow Tech Internship 2026._
