@@ -1,27 +1,32 @@
 # SoftGrowTech - Event Booking Website
 
-This project is part of my **Web Development Internship** at **SoftGrow Tech** (Task 1). It is a responsive and interactive event booking platform.
-
-## 🚀 Features
-
-- **Event Filtering:** Users can filter events by category.
-- **Dynamic Booking:** A functional modal with price calculation based on ticket count.
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
-- **Dark/Light Mode:** A toggle for user-preferred viewing modes.
-
-## 🛠️ Tools Used
-
-- **HTML5**: For page structure.
-- **CSS3**: For custom styling and layout.
-- **JavaScript (ES6)**: For interactivity, filtering, and theme toggling.
-- **FontAwesome**: For iconography.
-
-## 📂 How to Run
-
-1. Clone the repository:
-   `git clone https://github.com/kenenisa-j/SoftGrowTech_EventBookingWebsite.git`
-2. Open `index.html` in your browser.
+This project is developed as part of my **Web Development Internship (Task 1)** at **SoftGrowTech**.  
+It is a responsive and interactive Event Booking Website designed to showcase events and improve user experience.
 
 ---
 
-_Created by Kenenisa Jaleto as part of the SoftGrow Tech Internship 2026._
+## 🚀 Features
+
+- **Event Filtering:** Users can filter events based on categories.
+- **Dynamic Booking System:** Modal-based booking system with ticket quantity and price calculation.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop devices.
+- **Dark/Light Mode Toggle:** Allows users to switch between themes for better user experience.
+- **Modern UI:** Clean and user-friendly interface with smooth interactions.
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** – Structure of the website
+- **CSS3** – Styling and responsive layout
+- **JavaScript (ES6)** – Interactivity, filtering, and theme switching
+- **Font Awesome** – Icons for UI enhancement
+
+---
+
+## 📂 How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kenenisa-j/SoftGrowTech_EventBookingWebsite.git
+   ```
