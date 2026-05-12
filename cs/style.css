@@ -119,6 +119,125 @@ h1, h2, h3, h4, strong {
   transform: scale(1.1);
   border-color: var(--accent);
 }
+
+/* --- RESET & FIX --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 80px !important;
+    background-color: var(--white) !important;
+    display: flex !important;
+    align-items: center;
+    z-index: 99999 !important; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* FIX: Space out Toggle and Hamburger */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* This creates the space you needed */
+}
+
+/* HAMBURGER VISIBILITY */
+.hamburger {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100002 !important; /* Higher than nav-links so you can click X */
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #007bff !important; 
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+/* HAMBURGER TO X ANIMATION */
+.hamburger.active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+.hamburger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+/* MOBILE NAV OVERLAY - FIXED "OWN PAGE" EFFECT */
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white) !important; /* Solid color to hide background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-100%); 
+    transition: transform 0.5s ease-in-out;
+    z-index: 100001 !important; /* Sits behind the Hamburger 'X' */
+}
+
+.nav-links.active {
+    transform: translateY(0); 
+}
+
+.nav-links a {
+    font-size: 2rem;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* --- BIG SCREEN CENTERED LAYOUT --- */
+@media (min-width: 1024px) {
+    .hamburger { display: none !important; }
+
+    .nav-links {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        background: transparent !important;
+        transform: none !important; 
+        display: flex !important;
+        flex: 1; 
+        justify-content: center; /* PERFECT CENTERING */
+        gap: 30px;
+    }
+
+    .nav-links a { 
+        font-size: 1rem; 
+        text-transform: capitalize;
+        color: var(--dark);
+        font-weight: 600;
+    }
+
+    .theme-toggle-btn {
+        margin-left: 20px; /* Space from the centered links */
+    }
+}
 /* --- HERO SECTION STYLES --- */
 .hero {
   position: relative;

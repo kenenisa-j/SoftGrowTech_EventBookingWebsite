@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- THEME TOGGLE LOGIC ---
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
   const icon = themeToggle.querySelector("i");
@@ -20,22 +21,36 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.classList.replace("fa-sun", "fa-moon");
   }
 
+  // --- UPDATED NAVIGATION LOGIC (HAMBURGER & X-ANIMATION) ---
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("active");
-  });
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      // Toggle the slide-in menu
+      navLinks.classList.toggle("active");
+      // Toggle the X animation on the hamburger itself
+      hamburger.classList.toggle("active");
 
+      // Prevent scrolling the background when menu is open
+      if (navLinks.classList.contains("active")) {
+        body.style.overflow = "hidden";
+      } else {
+        body.style.overflow = "auto";
+      }
+    });
+  }
+
+  // Close menu and reset icon when a link is clicked
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
       hamburger.classList.remove("active");
+      body.style.overflow = "auto"; // Re-enable scroll
     });
   });
 
-  // --- MODAL & BOOKING LOGIC --- //
+  // --- MODAL & BOOKING LOGIC ---
   const modal = document.getElementById("bookingModal");
   const closeBtn = document.querySelector(".close-modal");
   const bookButtons = document.querySelectorAll(".book-btn");
@@ -64,11 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModalFunc = () => {
     modal.classList.remove("active");
     modal.style.display = "none";
-    // Allow background to scroll again
     body.style.overflow = "auto";
   };
 
-  closeBtn.addEventListener("click", closeModalFunc);
+  if (closeBtn) closeBtn.addEventListener("click", closeModalFunc);
 
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
@@ -76,37 +90,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  ticketInput.addEventListener("input", (e) => {
-    let val = parseInt(e.target.value) || 1;
-    if (val < 1) val = 1;
-    priceDisplay.innerText = `$${val * basePrice}`;
-  });
+  if (ticketInput) {
+    ticketInput.addEventListener("input", (e) => {
+      let val = parseInt(e.target.value) || 1;
+      if (val < 1) val = 1;
+      priceDisplay.innerText = `$${val * basePrice}`;
+    });
+  }
 
-  // --- FAQ ACCORDION --- //
+  // --- FAQ ACCORDION ---
   const faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach((item) => {
-    item.querySelector(".faq-question").addEventListener("click", () => {
-      faqItems.forEach((other) => {
-        if (other !== item) other.classList.remove("active");
-      });
+    const question = item.querySelector(".faq-question");
+    if (question) {
+      question.addEventListener("click", () => {
+        faqItems.forEach((other) => {
+          if (other !== item) other.classList.remove("active");
+        });
 
-      item.classList.toggle("active");
-      const icon = item.querySelector(".faq-question i");
-      if (item.classList.contains("active")) {
-        icon.classList.replace("fa-plus", "fa-minus");
-      } else {
-        icon.classList.replace("fa-minus", "fa-plus");
-      }
-    });
+        item.classList.toggle("active");
+        const icon = item.querySelector(".faq-question i");
+        if (icon) {
+          if (item.classList.contains("active")) {
+            icon.classList.replace("fa-plus", "fa-minus");
+          } else {
+            icon.classList.replace("fa-minus", "fa-plus");
+          }
+        }
+      });
+    }
   });
 
-  // --- EVENT FILTERING --- //
+  // --- EVENT FILTERING ---
   const filterBtns = document.querySelectorAll(".filter-btn");
   const cards = document.querySelectorAll(".event-card");
 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      document.querySelector(".filter-btn.active").classList.remove("active");
+      const activeBtn = document.querySelector(".filter-btn.active");
+      if (activeBtn) activeBtn.classList.remove("active");
       btn.classList.add("active");
 
       const filter = btn.getAttribute("data-filter");
@@ -123,11 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- SMOOTH SCROLLING --- //
+  // --- SMOOTH SCROLLING ---
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
+      const targetId = this.getAttribute("href");
+      const target = document.querySelector(targetId);
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }
